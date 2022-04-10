@@ -1,0 +1,5 @@
+package-lock.json
+.vscode/
+.replit
+test.js
+node_modules/
