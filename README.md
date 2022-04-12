@@ -30,7 +30,7 @@
 |                 |                                                       Documentação e pequenas informações        |                                                        |
 |:---------------:|:------------------------------------------------------------------------------------------------:|:------------------------------------------------------:|
 |  Exemplo de Uso |                                             Descrição                                            |                           Uso                          |
-|       COMUM     |                                Retorna um Quiz setado manualmente                                |          quiz('categoria', 'numero da questao')        |
+|       COMUM     |                                Retorna um Quiz setado manualmente                                |          quiz('categoria', 'numero')        |
 |      RANDOM     |                        Retorna um Quiz aleatório como categoria ou questão                       |               quiz('random', 'random')                 |
 ## Sobre
 💡 Uma API de Questões e Respostas para seu bot do Discord e WebSite, 100% em português e fácil de usar ⚡
@@ -50,10 +50,11 @@ let quiz = require("quiz-api")
 let categoria = "CATEGORIA"
 let numero = "NÚMERO DA QUESTÃO"
 
-var res = quiz(`${category}`, `${questionNumber}`)
+var res = quiz(`${categoria}`, `${numero}`)
 ```
 
 ## Categorias
+### Em todas as categorias atualmente temos [10] Quizes
 ```fix
 [ 'esportes', 'hitoria', 'entretenimento' ]
 ```
