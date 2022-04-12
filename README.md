@@ -2,7 +2,6 @@
 <div align="center">
     <a href="https://www.npmjs.com/package/quiz-api"><img src="https://user-images.githubusercontent.com/61317250/159102864-01bed8cb-3d0d-4cee-b78a-efb8a9309d79.png" alt="quizapi icon" /></a>
     <h1>QuizAPI</h1>
-    <h1>EM BREVE... - COMING SOON...</h1>
     <p>💡 Uma API de Questões e Respostas para seu bot do Discord e WebSite, 100% em português e fácil de usar ⚡</p>
     <a href="https://discord.gg/gNFEMrHshn"><img src="https://img.shields.io/discord/786392360475951154?style=for-the-badge&label=Chat&color=2490f8&logo=discord&logoColor=white" alt="discord server" /></a>
     <a href="https://www.npmjs.com/package/quiz-api"><img src="https://img.shields.io/npm/v/quiz-api.svg?style=for-the-badge&maxAge=3600&color=ec842c&logo=npm" alt="npm version" /></a>
@@ -21,12 +20,18 @@
 - [Sobre](#sobre)
 - [Instalação](#instalação)
   - [Setup](#setup)
-- [Exemplo do Uso](#exemplo-do-uso)
-  - [Comum](#comum)
-  - [Random](#random)
+- [Categorias](#categorias)
+- [Exemplo de Uso](#exemplo-de-uso)
+  - [COMUM](#comum)
+  - [RANDOM](#random)
 - [QuizAPI](#quizapi)
 - [Open Source](#open-source)
 
+|                 |                                                       Documentação e pequenas informações        |                                                        |
+|:---------------:|:------------------------------------------------------------------------------------------------:|:------------------------------------------------------:|
+|  Exemplo de Uso |                                             Descrição                                            |                           Uso                          |
+|       COMUM     |                                Retorna um Quiz setado manualmente                                |          quiz('categoria', 'numero da questao')        |
+|      RANDOM     |                        Retorna um Quiz aleatório como categoria ou questão                       |               quiz('random', 'random')                 |
 ## Sobre
 💡 Uma API de Questões e Respostas para seu bot do Discord e WebSite, 100% em português e fácil de usar ⚡
 ## Instalação
@@ -46,21 +51,43 @@ let categoria = "CATEGORIA"
 let numero = "NÚMERO DA QUESTÃO"
 
 var res = quiz(`${category}`, `${questionNumber}`)
+```
+
+## Categorias
+```fix
+[ 'esportes', 'hitoria', 'entretenimento' ]
+```
+
+## Exemplo de Uso
+### Comum
+#### Example - 
+```js
+quiz('esportes', '1')
 
 // retorna
 /*
 {
-  questao: "questão",
-  alternativas: "alternativas"
-  resposta: "resposta"
+  alternativas: "1) Usain Bolt\n2) Pelé\n3) Oscar Schmidt\n4) Yan Gomes\n5) Sérgio Dutra",
+  questao: "Qual foi o maior corredor do mundo?",
+  resposta: "1"
 }
 */
 ```
-## Exemplo do Uso
-### Comum
-
 ### Random
+#### Example - 
+```js
+quiz('random', 'random') // retorna um quiz aleatório de uma categoria aleatória
+quiz('esporte', 'random') // retorna um quiz aleatório de uma categoria de esporte
 
+// retorna
+/*
+{
+  alternativas: "Alternativas aleatórias.",
+  questao: "Questões aleatórias.",
+  resposta: "Respostas aleatórias."
+}
+*/
+```
 <br>
 
 <div align="center">

@@ -1,7 +1,7 @@
 {
-  "name": "quizapi-npm",
+  "name": "quiz-api",
   "description": "QuizAPI - 💡 Uma API de Questões e Respostas para seu bot do Discord e WebSite, 100% em português e fácil de usar ⚡",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
